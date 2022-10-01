@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { pipe, Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 
@@ -10,6 +10,7 @@ import { debounceTime } from 'rxjs/operators';
 export class PaisInputComponent implements OnInit {
   constructor() {}
 
+  @Input() placeholder: string = '';
   @Output() onEnter: EventEmitter<string> = new EventEmitter();
   @Output() onDebounce: EventEmitter<string> = new EventEmitter();
 
