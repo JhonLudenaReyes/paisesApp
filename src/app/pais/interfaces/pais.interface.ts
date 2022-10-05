@@ -15,7 +15,7 @@ export interface Country {
   region: string;
   subregion: string;
   languages: Languages;
-  translations: { [key: string]: Translation };
+  translations: any;
   latlng: number[];
   landlocked: boolean;
   area: number;
